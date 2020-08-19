@@ -1,0 +1,22 @@
+.transaction{
+    background: #FFFFFF;
+    border: 1px solid #EEF8FD;
+    border-radius: 2px;
+    width: 253px;
+    height: 75px;
+    padding: 18px;
+    .details{
+        display: flex;
+        flex-direction: column;
+        .title{
+            font-size: 12px;
+            line-height: 16px;
+            color: #787C90;
+        }
+        .amount{
+            font-size: 18px;
+            line-height: 24px;
+            color: #262626;
+        }
+    }
+}
