@@ -1,0 +1,32 @@
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: auto;
+    div{
+        height: 49%;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+        color: #262626;
+        font-size: 14px;
+        h3{
+            margin-bottom: 11px;
+        }
+        p{
+            margin-bottom: 11px;
+        }
+        .pending{
+            font-weight: 600;
+            color: yellow;
+        }
+        .reconciled{
+            font-weight: 600;
+            color: green;
+        }
+        .total{
+            font-weight: 600;
+            color: blue;
+        }
+    }
+}
