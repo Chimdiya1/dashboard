@@ -16,6 +16,7 @@ const DashboardArea = () => {
                 <GraphBody />
                 <Details/>
             </div>
+            <h3>Payments</h3>
         </div>
      );
 }

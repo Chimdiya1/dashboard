@@ -1,4 +1,41 @@
 .graphBody{
     width: 70%;
-    background-color: blue;
+    border-right: 4px solid #F7F8FA;
+    &-header{
+        height: 60px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        padding: 0px 30px ;
+        justify-content: space-between;
+        h3{
+            margin-right: 207px;
+        }
+        .date-select{
+            border: 1px solid #DDE0E3;
+            border-radius: 4.25px;
+            background-color: #fff;
+            width: 138px;
+            height: 31px;
+        }
+        .buttons{
+            display: flex;
+            width: 70px;
+            justify-content: space-between;
+        }
+        button{
+            width: 29.36px;
+            height: 22.97px;
+            background: linear-gradient(0deg, #F2F4F7 0%, #FFFFFF 100%);
+            border: none;
+            border: 1px solid #CED0DA;
+            border-radius: 4px;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+        }
+        .arrow{
+            color: #CCCFD4;
+        }
+    }
 }
