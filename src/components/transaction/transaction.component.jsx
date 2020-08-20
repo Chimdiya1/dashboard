@@ -50,8 +50,7 @@ const data = [
   },
 ];
 
-export class Example extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/tv8zfzxo/';
+export class MiniChart extends PureComponent {
 
   render() {
     return (
@@ -76,7 +75,7 @@ const Transaction = ({title,amount}) => {
                 <p className="amount">{amount}</p>
             </div>
             <div className="graph">
-                <Example/>
+                <MiniChart/>
             </div>
         </div>
      );

@@ -6,7 +6,7 @@ const PaymentDetails = ({ pending, reconciled, total }) => {
         height: '4px',
         border: 'none',
         borderRadius: '120px',
-        background: `linear-gradient(to right, green 0% ${reconciledPercent}%, yellow ${reconciledPercent}% 100%)`,
+        background: `linear-gradient(to right, green 0% ${reconciledPercent}%, #FDC203 ${reconciledPercent}% 100%)`,
         marginBottom: '11px'
     }
     return (
