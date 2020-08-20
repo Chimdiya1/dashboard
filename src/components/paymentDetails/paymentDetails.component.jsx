@@ -1,11 +1,12 @@
 import React from 'react'
 
 const PaymentDetails = ({ pending, reconciled, total }) => {
+    const reconciledPercent = (reconciled / total) * 100
     const hrStyle = {
         height: '4px',
         border: 'none',
         borderRadius: '120px',
-        background: `linear-gradient(to right, green 0% ${reconciled}%, yellow ${reconciled}% ${total}%)`,
+        background: `linear-gradient(to right, green 0% ${reconciledPercent}%, yellow ${reconciledPercent}% 100%)`,
         marginBottom: '11px'
     }
     return (

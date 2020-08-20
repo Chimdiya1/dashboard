@@ -32,7 +32,7 @@ const data = [
     price: '100,000',
     transactionId: '023455',
     time: '11:50',
-    status: 'Reconcilled',
+    status: 'Pending',
   },
   {
     title: 'Hp probook device',
@@ -49,11 +49,11 @@ const data = [
     status: 'Reconcilled',
   },
   {
-    title: 'Hp probook device',
-    price: '100,000',
+    title: 'Desktop',
+    price: '500,000',
     transactionId: '234565',
     time: '11:50',
-    status: 'Reconcilled',
+    status: 'Pending',
   },
   {
     title: 'Hp probook device',

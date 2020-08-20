@@ -42,7 +42,7 @@ const DashboardArea = () => {
                     <option value="Reconcilled">Reconciled</option>
                     <option value="UnReconcilled">UnReconciled</option>
                     <option value="Reconcilled">Settled</option>
-                    <option value="UnReconcilled">UnSettled</option>
+                    <option value="Pending">UnSettled</option>
                 </select>
             </div>
             <Table data={Data} />
