@@ -3,10 +3,6 @@ import React, { PureComponent } from 'react';
 import {
   AreaChart,
   Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
 } from 'recharts';
 
 const data = [
@@ -64,7 +60,7 @@ export class Example extends PureComponent {
         height={37}
         data={data}
       >
-            <Area  dataKey="uv" stroke="#0294FF" fill="#0095ff" />
+        <Area dataKey="uv" stroke="#0294FF" fill="rgba(0, 149, 255, 0.2)" />
       </AreaChart>
     );
   }

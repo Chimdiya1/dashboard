@@ -1,53 +1,56 @@
-import React, { PureComponent } from 'react';
-import {
-    AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
-} from 'recharts';
+import React from 'react';
+import Chart from '../Chart/Chart.component';
+
 
 const data = [
-    {
-        name: 'January', uv: 4000, pv: 2400, amt: 2400,
-    },
-    {
-        name: 'Page B', uv: 3000, pv: 1398, amt: 2210,
-    },
-    {
-        name: 'Page C', uv: 2000, pv: 9800, amt: 2290,
-    },
-    {
-        name: 'Page D', uv: 2780, pv: 3908, amt: 2000,
-    },
-    {
-        name: 'Page E', uv: 1890, pv: 4800, amt: 2181,
-    },
-    {
-        name: 'Page F', uv: 2390, pv: 3800, amt: 2500,
-    },
-    {
-        name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
-    },
+    [
+        {
+            name: 'Jan', uv: 4000, pv: 2400, amt: 2400,
+        },
+        {
+            name: 'Feb', uv: 3000, pv: 1398, amt: 2210,
+        },
+        {
+            name: 'Mar', uv: 2000, pv: 9800, amt: 2290,
+        },
+        {
+            name: 'Apr', uv: 2780, pv: 3908, amt: 2000,
+        },
+        {
+            name: 'May', uv: 1890, pv: 4800, amt: 2181,
+        },
+        {
+            name: 'Jun', uv: 2390, pv: 3800, amt: 2500,
+        },
+    ],
+    [
+        {
+            name: 'Jul', uv: 400, pv: 2400, amt: 2400,
+        },
+        {
+            name: 'Aug', uv: 3000, pv: 1398, amt: 2210,
+        },
+        {
+            name: 'Sep', uv: 2600, pv: 9800, amt: 2290,
+        },
+        {
+            name: 'Oct', uv: 780, pv: 3908, amt: 2000,
+        },
+        {
+            name: 'Nov', uv: 190, pv: 4800, amt: 2181,
+        },
+        {
+            name: 'Dec', uv: 2990, pv: 3800, amt: 2500,
+        },
+    ],
 ];
 
-export class Chart extends PureComponent {
-    render() {
-        return (
-            <AreaChart
-                width={720}
-                height={274}
-                data={data}
-            >
-                <CartesianGrid horizontal={false} />
-                <XAxis dataKey='name'/>
-                <Tooltip />
-                <Area dataKey="uv" label={{ fill: 'red', fontSize: 2, position:'right' }} stroke="rgba(135, 131, 216, 0)" fill="rgba(2, 148, 255, 0.45)" />
-            </AreaChart>
-        );
-    }
-}
 
-const Graph = () => {
+
+const Graph = ({range}) => {
     return ( 
         <div className='graph'>
-            <Chart/>
+            <Chart data={data[range]}/>
         </div>
      );
 }

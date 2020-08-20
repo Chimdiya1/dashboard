@@ -1,10 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './dashboardArea.scss'
 import Transaction from '../transaction/transaction.component'
 import GraphBody from '../graphBody/graphBody.component'
 import Details from '../details/details.component'
 import Table from '../table/table.component'
+import data from './data'
 const DashboardArea = () => {
+    const [Data, setData] = useState(data)
+    const filter = (val) => {
+        if (val!== 'All') {
+            let newData = data.filter((data) => data.status === val)
+            setData(newData)
+        } else {
+            setData(data)
+        }
+    }
     return ( 
         <div className='dashboardArea'>
             <div className='transactions'>
@@ -27,15 +37,24 @@ const DashboardArea = () => {
                     <input class="input-field" type="text" placeholder='Search Payments'/>
                 </div>
                 <span>Show</span>
-                <select name="payments" id="payment" className='select-payment'>
+                <select onChange={(e) => { filter(e.target.value) }} name="payments" id="payment" className='select-payment'>
                     <option value="All">All</option>
-                    <option value="Reconciled">Reconciled</option>
-                    <option value="UnReconciled">UnReconciled</option>
-                    <option value="Settled">Settled</option>
-                    <option value="UnSettled">UnSettled</option>
+                    <option value="Reconcilled">Reconciled</option>
+                    <option value="UnReconcilled">UnReconciled</option>
+                    <option value="Reconcilled">Settled</option>
+                    <option value="UnReconcilled">UnSettled</option>
                 </select>
             </div>
-            <Table/>
+            <Table data={Data} />
+            <div className="pagination">
+                <p>Showing 1 to 10 of 500 entries</p>
+                <div className='pagination-buttons'>
+                    <p>Previous</p>
+                    <p className='current-page'>1</p>
+                    <p>2</p>
+                    <p>Next</p>
+                </div>
+            </div>
         </div>
      );
 }

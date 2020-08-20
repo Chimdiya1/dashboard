@@ -7,12 +7,16 @@ const Navbar = () => {
             <p className="logo">TransMonitor</p>
             <div className='search'>
                 <i className='fas fa-search icon'></i>
-                <span className='search-text'>Search...</span>
+                <input type="text" placeholder='Search...' name="" className='search-text' id=""/>
             </div>
             <div className="nav-links">
                 <p className="link">Support</p>
                 <p className="link">FAQ</p>
-                <i className="link far fa-bell"></i>
+                <i className="link far fa-bell">
+                    <div className="notif">
+                        8
+                    </div>
+                </i>
                 <div className="greeting">
                     <p>Hello</p>
                     <p>Oluwaleke Ojo</p>
